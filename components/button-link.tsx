@@ -1,0 +1,3 @@
+import Link from "next/link";
+type ButtonLinkProps = { href: string; children: React.ReactNode; variant?: "primary" | "secondary" };
+export function ButtonLink({ href, children, variant = "primary" }: ButtonLinkProps) { const styles = variant === "primary" ? "border-gold bg-gold text-obsidian hover:bg-premium-gold" : "border-[rgba(248,245,239,.42)] bg-black/30 text-ivory hover:border-gold hover:text-gold"; return <Link href={href} className={"inline-flex min-h-11 items-center justify-center rounded-sm border px-5 py-3 text-sm font-semibold tracking-[0.08em] transition " + styles}>{children}</Link>; }
